@@ -344,34 +344,91 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* GitHub Contributions Section */}
+      {/* GitHub Stats Section */}
       <section className="px-6 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center">
-            GitHub Activity
-          </h2>
+          <h2 className="text-4xl font-bold mb-4 text-center">GitHub Stats</h2>
           <p className="text-center text-gray-400 mb-12">
-            My contribution graph over the past year
+            My coding journey and contributions
           </p>
-          <div className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-purple-500/20">
+
+          {/* GitHub Stats Cards */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-slate-800/50 p-6 rounded-xl backdrop-blur-sm border border-purple-500/20 flex items-center justify-center">
+              <img
+                src="https://github-readme-stats.vercel.app/api?username=vishnukarthik29&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1e293b&title_color=a855f7&icon_color=ec4899&text_color=e2e8f0"
+                alt="GitHub Stats"
+                className="w-full rounded-lg"
+              />
+            </div>
+            <div className="bg-slate-800/50 p-6 rounded-xl backdrop-blur-sm border border-purple-500/20 flex items-center justify-center">
+              <img
+                src="https://github-readme-streak-stats.herokuapp.com/?user=vishnukarthik29&theme=tokyonight&hide_border=true&background=1e293b&ring=a855f7&fire=ec4899&currStreakLabel=e2e8f0"
+                alt="GitHub Streak"
+                className="w-full rounded-lg"
+              />
+            </div>
+          </div>
+
+          {/* Top Languages */}
+          <div className="bg-slate-800/50 p-6 rounded-xl backdrop-blur-sm border border-purple-500/20 mb-8 flex items-center justify-center">
+            <img
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=vishnukarthik29&layout=compact&theme=tokyonight&hide_border=true&bg_color=1e293b&title_color=a855f7&text_color=e2e8f0&langs_count=8"
+              alt="Top Languages"
+              className="w-full max-w-2xl rounded-lg"
+            />
+          </div>
+
+          {/* GitHub Contribution Graph */}
+          <div className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-purple-500/20 mb-8">
+            <h3 className="text-2xl font-semibold mb-6 text-center text-purple-400">
+              Contribution Activity
+            </h3>
             <img
               src="https://ghchart.rshah.org/8B5CF6/vishnukarthik29"
               alt="GitHub Contribution Chart"
               className="w-full rounded-lg"
               style={{ imageRendering: "crisp-edges" }}
             />
-            <div className="mt-6 text-center">
-              <a
-                href="https://github.com/vishnukarthik29"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
-              >
-                <Github size={20} />
-                <span>View Full GitHub Profile</span>
-                <ExternalLink size={16} />
-              </a>
+          </div>
+
+          {/* GitHub Trophy */}
+          <div className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-purple-500/20 mb-8">
+            <h3 className="text-2xl font-semibold mb-6 text-center text-purple-400">
+              Achievements
+            </h3>
+            <div className="flex items-center justify-center">
+              <img
+                src="https://github-profile-trophy.vercel.app/?username=vishnukarthik29&theme=tokyonight&no-frame=true&no-bg=true&column=4&margin-w=15&margin-h=15"
+                alt="GitHub Trophies"
+                className="w-full rounded-lg"
+              />
             </div>
+          </div>
+
+          {/* Activity Graph */}
+          <div className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-purple-500/20">
+            <h3 className="text-2xl font-semibold mb-6 text-center text-purple-400">
+              Activity Graph
+            </h3>
+            <img
+              src="https://github-readme-activity-graph.vercel.app/graph?username=vishnukarthik29&theme=tokyo-night&hide_border=true&bg_color=1e293b&color=a855f7&line=ec4899&point=e2e8f0"
+              alt="GitHub Activity Graph"
+              className="w-full rounded-lg"
+            />
+          </div>
+
+          <div className="mt-8 text-center">
+            <a
+              href="https://github.com/vishnukarthik29"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-lg"
+            >
+              <Github size={24} />
+              <span>View Full GitHub Profile</span>
+              <ExternalLink size={20} />
+            </a>
           </div>
         </div>
       </section>
@@ -422,10 +479,15 @@ export default function Portfolio() {
         <p>&copy; 2024 Vishnu Karthik. Built with React & Tailwind CSS</p>
       </footer>
 
-      <style>{`
+      <style jsx>{`
         @keyframes gradient {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
+          0%,
+          100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
         }
         .animate-gradient {
           background-size: 200% 200%;
